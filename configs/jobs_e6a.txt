@@ -1,0 +1,10 @@
+cfm_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+cfm_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+cfm_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+cfm_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+cfm_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+sfm_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+sfm_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+sfm_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+sfm_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+sfm_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k

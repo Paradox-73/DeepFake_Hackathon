@@ -1,0 +1,24 @@
+dflipmix_f3 data.fold=3 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+dflipmix_f4 data.fold=4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+dmix10_f0 data.fold=0 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=1.0
+dmix10_f1 data.fold=1 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=1.0
+dmix10_f2 data.fold=2 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=1.0
+dmix02_f0 data.fold=0 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.2
+dmix02_f1 data.fold=1 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.2
+dmix02_f2 data.fold=2 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.2
+dmixls0_f0 data.fold=0 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 train.label_smoothing=0
+dmixls0_f1 data.fold=1 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 train.label_smoothing=0
+dmixls0_f2 data.fold=2 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 train.label_smoothing=0
+dmixcorrupt3_f0 data.fold=0 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.corrupt.p=0.8
+dmixcorrupt3_f1 data.fold=1 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.corrupt.p=0.8
+dmixcorrupt3_f2 data.fold=2 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.corrupt.p=0.8
+cfm_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+cfm_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+cfm_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+cfm_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+cfm_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+sfm_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+sfm_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+sfm_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+sfm_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+sfm_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k

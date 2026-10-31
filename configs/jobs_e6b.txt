@@ -1,0 +1,2 @@
+dflipmix_f3 data.fold=3 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+dflipmix_f4 data.fold=4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
