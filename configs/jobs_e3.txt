@@ -1,0 +1,8 @@
+e3_swin model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k
+e3_effb4 model.arch=tf_efficientnet_b4.ap_in1k train.batch_size=32 train.eval_batch_size=32
+e3_xception model.arch=legacy_xception.tf_in1k model.drop_path_rate=0
+e3_cx320 model.img_size=320 train.batch_size=32 train.eval_batch_size=32 robust.batch_size=32
+e3_cxsmall model.arch=convnext_small.fb_in22k_ft_in1k model.drop_path_rate=0.4 train.batch_size=48
+e3_cxbase model.arch=convnext_base.fb_in22k_ft_in1k model.drop_path_rate=0.5 train.batch_size=32 train.eval_batch_size=32 robust.batch_size=32
+e3_vits model.arch=vit_small_patch16_224.augreg_in21k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1
+e3_deit3s model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1

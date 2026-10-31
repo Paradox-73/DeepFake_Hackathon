@@ -1,0 +1,6 @@
+convnext_tiny model.arch=convnext_tiny.fb_in22k_ft_in1k
+convnext_tiny_corrupt model.arch=convnext_tiny.fb_in22k_ft_in1k augment.corrupt.p=0.6
+effb4_corrupt model.arch=tf_efficientnet_b4.ap_in1k augment.corrupt.p=0.6 train.batch_size=48
+swin_tiny_corrupt model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k augment.corrupt.p=0.6
+xception_corrupt model.arch=legacy_xception.tf_in1k augment.corrupt.p=0.6
+effv2s_corrupt model.arch=tf_efficientnetv2_s.in21k_ft_in1k augment.corrupt.p=0.6 train.batch_size=48

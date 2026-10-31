@@ -1,0 +1,10 @@
+effb4_corrupt model.arch=tf_efficientnet_b4.ap_in1k augment.corrupt.p=0.6 train.batch_size=48
+swin_tiny_corrupt model.arch=swin_tiny_patch4_window7_224.ms_in22k_ft_in1k augment.corrupt.p=0.6
+xception_corrupt model.arch=legacy_xception.tf_in1k augment.corrupt.p=0.6
+effv2s_corrupt model.arch=tf_efficientnetv2_s.in21k_ft_in1k augment.corrupt.p=0.6 train.batch_size=48
+cx_blend30 augment.corrupt.p=0.6 augment.blend.p=0.3 augment.blend.donor_p=0.25
+cx_blend50 augment.corrupt.p=0.6 augment.blend.p=0.5 augment.blend.donor_p=0.25
+cx_blendonly augment.corrupt.p=0.6 augment.blend.p=1.0 augment.blend.donor_p=0.25
+cx_lr1e4 augment.corrupt.p=0.6 train.lr=0.0001
+cx_dp30 augment.corrupt.p=0.6 model.drop_rate=0.3 model.drop_path_rate=0.3
+cx_ls10 augment.corrupt.p=0.6 train.label_smoothing=0.1

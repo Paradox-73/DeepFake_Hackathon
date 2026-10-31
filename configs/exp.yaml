@@ -1,0 +1,25 @@
+﻿# Competition experiments (GPU server). Override per run with --set.
+base: default.yaml
+output_dir: runs/e0
+data:
+  root: data/dataset/hackathon_dataset/train
+  folds_csv: configs/folds.csv
+  fold: 0
+model:
+  arch: convnext_tiny.fb_in22k_ft_in1k
+  drop_rate: 0.3
+  drop_path_rate: 0.3
+train:
+  epochs: 25
+  batch_size: 64
+  eval_batch_size: 64
+  lr: 0.0002
+  warmup_epochs: 1
+  num_workers: 4
+  imbalance: none
+  label_smoothing: 0.05
+  ema: 0.998
+  patience: 99
+augment:
+  corrupt: {p: 0.6, max_ops: 2}
+robust: {batch_size: 64, num_workers: 4}
