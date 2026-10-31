@@ -1,0 +1,17 @@
+# Used only by scripts/smoke_test.py (synthetic data, random-init backbone, tiny and fast).
+base: default.yaml
+output_dir: runs/smoke/exp
+data:
+  adapter: image_folder
+  root: runs/smoke/data/train
+  cache_dir: runs/smoke/cache
+  prepare_workers: 1
+  val_fraction: 0.25
+test:
+  adapter: image_folder
+  root: runs/smoke/data/test
+  params: {labeled: false}
+model: {pretrained: false, img_size: 128}
+train: {epochs: 8, batch_size: 16, num_workers: 0, patience: 8, lr: 0.001}
+predict: {batch_size: 16, num_workers: 0, tta: [hflip], label_names: {0: real, 1: fake}}
+robust: {batch_size: 16, num_workers: 0}

@@ -1,0 +1,78 @@
+# Default config (tuned for the Linux GPU server: 14 CPU cores, ~11 GB free VRAM).
+# Run from the deepfake/ folder. Relative paths are relative to it.
+seed: 42
+deterministic: true          # cudnn deterministic + deterministic algorithms (slightly slower)
+device: auto
+output_dir: runs/exp1        # checkpoints, logs, metrics, split.json are written here
+
+data:                        # TRAIN data. Replace adapter/root/params for the official dataset.
+  adapter: image_folder      # image_folder | csv | video | custom   (see README)
+  root: data/train
+  params: {}
+  val_fraction: 0.15
+  cache_dir: cache           # extracted video frames / face crops are cached here
+  prepare_workers: 8         # processes for video frame extraction
+  video:                     # used only when the data contains videos
+    num_frames: 8            # frames sampled uniformly per video
+    jpeg_quality: 95
+    frame_ext: jpg
+  face:                      # optional face crop (applies to video frames and images)
+    detector: none           # none | haar | dnn | "my_file.py:factory"
+    margin: 0.3
+    # dnn: proto: path/deploy.prototxt   model: path/res10_300x300_ssd.caffemodel   confidence: 0.5
+
+test:                        # TEST data for predict.py (labels not required)
+  adapter: image_folder
+  root: data/test
+  params: {labeled: false}
+
+model:
+  arch: efficientnet_b0      # alternatives: convnext_nano, mobilenetv3_large_100, efficientnet_b2
+  pretrained: true           # ImageNet weights from timm (needs internet once)
+  pretrained_path: null      # or a local timm state-dict file when the server is offline
+  img_size: 224
+  drop_rate: 0.2
+  drop_path_rate: 0.0
+
+train:
+  epochs: 20
+  batch_size: 64
+  grad_accum: 1
+  lr: 0.0005
+  weight_decay: 0.05
+  warmup_epochs: 1
+  grad_clip: 1.0
+  amp: true                  # fp16 mixed precision
+  num_workers: 10
+  imbalance: pos_weight      # none | pos_weight | sampler
+  label_smoothing: 0.0
+  monitor: auc               # auc | acc | f1 | logloss  (early stopping + best checkpoint)
+  patience: 5
+  tune_threshold: true       # store the accuracy-maximising threshold from validation in the checkpoint
+
+augment:                     # robustness augmentations, applied with probability p
+  hflip: 0.5
+  crop: {p: 0.5, scale: [0.6, 1.0]}
+  color_jitter: {p: 0.5, strength: 0.2}
+  jpeg: {p: 0.4, quality: [30, 95]}
+  blur: {p: 0.25, sigma: [0.3, 2.0]}
+  noise: {p: 0.25, std: [2, 15]}
+  rescale: {p: 0.25, scale: [0.4, 0.9]}
+
+predict:
+  batch_size: 128
+  num_workers: 10
+  amp: true
+  tta: []                    # [] or [hflip]
+  aggregate: mean            # frames -> one score per video: mean | max | median
+  threshold: null            # null = use the threshold stored in the checkpoint
+  id_mode: name              # name | stem | src   (what goes in the id column)
+  columns: {id: id, label: label, prob: probability}   # prob: null to omit the column
+  label_names: {0: 0, 1: 1}  # e.g. {0: real, 1: fake}
+  header: true
+  sort: true
+  fallback_label: 1          # label written for files that cannot be decoded
+
+robust:                      # omit `perturbations` to use the built-in set (JPEG/blur/noise/downscale/brightness/combo)
+  batch_size: 64
+  num_workers: 10
