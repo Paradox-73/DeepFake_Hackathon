@@ -1,0 +1,4 @@
+n_dino16_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=vit_small_patch16_224.dino model.drop_path_rate=0.1 model.drop_rate=0.1
+n_dino16_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=vit_small_patch16_224.dino model.drop_path_rate=0.1 model.drop_rate=0.1
+n_dino8_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=vit_small_patch8_224.dino model.drop_path_rate=0.1 model.drop_rate=0.1 train.batch_size=32 train.eval_batch_size=32
+n_dino8_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=vit_small_patch8_224.dino model.drop_path_rate=0.1 model.drop_rate=0.1 train.batch_size=32 train.eval_batch_size=32
