@@ -1,0 +1,7 @@
+n_focal_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=focalnet_tiny_srf.ms_in1k model.drop_path_rate=0.1
+n_focal_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=focalnet_tiny_srf.ms_in1k model.drop_path_rate=0.1
+n_focal_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=focalnet_tiny_srf.ms_in1k model.drop_path_rate=0.1
+n_hiera_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=hiera_small_224.mae_in1k_ft_in1k model.drop_path_rate=0.1
+n_hiera_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=hiera_small_224.mae_in1k_ft_in1k model.drop_path_rate=0.1
+n_mamba_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=mambaout_tiny.in1k model.drop_path_rate=0.1
+n_mamba_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=mambaout_tiny.in1k model.drop_path_rate=0.1
