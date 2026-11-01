@@ -1,0 +1,8 @@
+b_serx_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.drop_path_rate=0.1 model.arch=seresnext50_32x4d.racm_in1k
+b_serx_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.drop_path_rate=0.1 model.arch=seresnext50_32x4d.racm_in1k
+b_eca_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.drop_path_rate=0.1 model.arch=ecaresnet50t.ra2_in1k
+b_eca_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.drop_path_rate=0.1 model.arch=ecaresnet50t.ra2_in1k
+b_bit_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.drop_path_rate=0.1 model.arch=resnetv2_50x1_bit.goog_in21k_ft_in1k
+b_bit_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.drop_path_rate=0.1 model.arch=resnetv2_50x1_bit.goog_in21k_ft_in1k
+b_r101_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.drop_path_rate=0.1 model.arch=resnet101d.ra2_in1k
+b_r101_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.drop_path_rate=0.1 model.arch=resnet101d.ra2_in1k
