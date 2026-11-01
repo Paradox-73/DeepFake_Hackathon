@@ -1,0 +1,5 @@
+s1c_f0 data.fold=0 seed=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+s1c_f1 data.fold=1 seed=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+s1c_f2 data.fold=2 seed=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+s1c_f3 data.fold=3 seed=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4
+s1c_f4 data.fold=4 seed=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4

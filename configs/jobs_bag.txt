@@ -1,0 +1,12 @@
+bagc1_f0 data.fold=0 seed=1
+bagd1_f0 data.fold=0 seed=1 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1
+bagc2_f0 data.fold=0 seed=2
+bagd2_f0 data.fold=0 seed=2 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1
+bagc3_f0 data.fold=0 seed=3
+bagd3_f0 data.fold=0 seed=3 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1
+bagc1_f1 data.fold=1 seed=1
+bagd1_f1 data.fold=1 seed=1 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1
+bagc2_f1 data.fold=1 seed=2
+bagd2_f1 data.fold=1 seed=2 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1
+bagc3_f1 data.fold=1 seed=3
+bagd3_f1 data.fold=1 seed=3 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1
