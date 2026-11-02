@@ -1,0 +1,16 @@
+e_p2_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 model.truncate=2
+e_p3_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 model.truncate=3
+e_aucc_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 train.pairwise=0.5
+e_bootc_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 train.boot=0.3
+e_aucd_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 train.pairwise=0.5
+e_bootd_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 train.boot=0.3
+e_aucr_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 train.pairwise=0.5
+e_bootr_f0 data.fold=0 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 train.boot=0.3
+e_p2_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 model.truncate=2
+e_p3_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 model.truncate=3
+e_aucc_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 train.pairwise=0.5
+e_bootc_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 train.boot=0.3
+e_aucd_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 train.pairwise=0.5
+e_bootd_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 train.boot=0.3
+e_aucr_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 train.pairwise=0.5
+e_bootr_f1 data.fold=1 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 train.boot=0.3
