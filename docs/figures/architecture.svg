@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 228" width="760" height="228" role="img" aria-labelledby="architecture-title architecture-desc">
+<title id="architecture-title">How one prediction is made</title>
+<desc id="architecture-desc">A face crop goes through 15 models from three families; each score is rescaled with its family's held-out statistics, the 15 scores are averaged, and a sigmoid gives the confidence that the image is fake.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+<marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#f5f5f5"/>
+<path d="M140,96 H154 Q162,96 162,88 V50 Q162,42 170,42 H183" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M140,114 H183" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M140,132 H154 Q162,132 162,140 V178 Q162,186 170,186 H183" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M340,42 H354 Q362,42 362,50 V88 Q362,96 370,96 H383" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M340,114 H383" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M340,186 H354 Q362,186 362,178 V140 Q362,132 370,132 H383" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M508,114 H539" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M624,114 H651" fill="none" stroke="#bf4520" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+<rect x="20" y="78" width="120" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="20" y="78" width="120" height="72" rx="6" fill="#ececec" stroke="#4f5d75" stroke-width="1"/>
+<rect x="28" y="84" width="32" height="12" rx="2" fill="none" stroke="#4f5d75" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="44.0" y="93" fill="#4f5d75" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">INPUT</text>
+<text x="80.0" y="115.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">Face crop</text>
+<text x="80.0" y="128.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">224×224 RGB</text>
+<text x="80.0" y="140.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">values 0 to 1</text>
+<rect x="184" y="16" width="156" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="184" y="16" width="156" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="192" y="22" width="28" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="206.0" y="31" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">CNN</text>
+<text x="262.0" y="49.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">ConvNeXt-T</text>
+<text x="262.0" y="62.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">27.8 M params · 5 seeds</text>
+<rect x="184" y="88" width="156" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="184" y="88" width="156" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="192" y="94" width="28" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="206.0" y="103" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">VIT</text>
+<text x="262.0" y="121.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">DeiT3-S</text>
+<text x="262.0" y="134.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">21.7 M params · 5 seeds</text>
+<rect x="184" y="160" width="156" height="52" rx="6" fill="#f5f5f5"/>
+<rect x="184" y="160" width="156" height="52" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="192" y="166" width="28" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="206.0" y="175" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">CNN</text>
+<text x="262.0" y="193.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">ResNet-50D</text>
+<text x="262.0" y="206.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">23.5 M params · 5 seeds</text>
+<rect x="384" y="78" width="124" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="384" y="78" width="124" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="392" y="84" width="28" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="406.0" y="93" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">STEP</text>
+<text x="446.0" y="115.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">Rescale</text>
+<text x="446.0" y="128.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">(s − μ) / σ</text>
+<text x="446.0" y="140.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">μ, σ: held-out</text>
+<rect x="540" y="86" width="84" height="56" rx="6" fill="#f5f5f5"/>
+<rect x="540" y="86" width="84" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="548" y="92" width="28" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="562.0" y="101" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">STEP</text>
+<text x="582.0" y="121.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">Average</text>
+<text x="582.0" y="134.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">15 scores</text>
+<rect x="652" y="78" width="96" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="652" y="78" width="96" height="72" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+<rect x="660" y="84" width="36" height="12" rx="2" fill="none" stroke="#bf4520" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="678.0" y="93" fill="#bf4520" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">OUTPUT</text>
+<text x="700.0" y="115.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">confidence</text>
+<text x="700.0" y="128.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">sigmoid = P(fake)</text>
+<text x="700.0" y="140.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">label: ≥ 0.475</text>
+</svg>

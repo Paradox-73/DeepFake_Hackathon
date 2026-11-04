@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 196" width="760" height="196" role="img" aria-labelledby="training-pipeline-title training-pipeline-desc">
+<title id="training-pipeline-title">How the 15 models were trained</title>
+<desc id="training-pipeline-desc">Training images are split into five folds with copies kept together, first models flag 508 wrong labels, then three families train on five folds for scoring and on all images for the final bundle.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+<marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#f5f5f5"/>
+<path d="M144,96 H171" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M284,96 H311" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M424,84 H434 Q442,84 442,76 V56 Q442,48 450,48 H459" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M424,108 H434 Q442,108 442,116 V136 Q442,144 450,144 H459" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M608,48 H614 Q622,48 622,56 V76 Q622,84 630,84 H635" fill="none" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+<path d="M608,144 H614 Q622,144 622,136 V116 Q622,108 630,108 H635" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="20" y="60" width="124" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="20" y="60" width="124" height="72" rx="6" fill="#ececec" stroke="#4f5d75" stroke-width="1"/>
+<rect x="28" y="66" width="28" height="12" rx="2" fill="none" stroke="#4f5d75" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="42.0" y="75" fill="#4f5d75" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">DATA</text>
+<text x="82.0" y="97.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">Grouped folds</text>
+<text x="82.0" y="110.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">7,000 images</text>
+<text x="82.0" y="122.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">copies share a fold</text>
+<rect x="172" y="60" width="112" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="172" y="60" width="112" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="180" y="66" width="32" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="196.0" y="75" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">TRAIN</text>
+<text x="228.0" y="97.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">First models</text>
+<text x="228.0" y="110.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">2 families</text>
+<text x="228.0" y="122.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">original labels</text>
+<rect x="312" y="60" width="112" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="312" y="60" width="112" height="72" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1"/>
+<rect x="320" y="66" width="36" height="12" rx="2" fill="none" stroke="#bf4520" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="338.0" y="75" fill="#bf4520" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">LABELS</text>
+<text x="368.0" y="97.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">Fix labels</text>
+<text x="368.0" y="110.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">flip85: 508 flips</text>
+<text x="368.0" y="122.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">train images only</text>
+<rect x="460" y="12" width="148" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="460" y="12" width="148" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="468" y="18" width="32" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="484.0" y="27" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">TRAIN</text>
+<text x="534.0" y="43.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">Fold runs</text>
+<text x="534.0" y="56.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">3 families × 5 folds</text>
+<text x="534.0" y="68.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">mixup, damage, shrink</text>
+<text x="534.0" y="80.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">scores, stats, cut-off</text>
+<rect x="460" y="108" width="148" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="460" y="108" width="148" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="468" y="114" width="32" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="484.0" y="123" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">TRAIN</text>
+<text x="534.0" y="139.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">All-data runs</text>
+<text x="534.0" y="152.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">3 families × 5 seeds</text>
+<text x="534.0" y="164.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">all 7,000, same recipe</text>
+<text x="534.0" y="176.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">fixed stop epoch</text>
+<rect x="636" y="60" width="112" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="636" y="60" width="112" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="644" y="66" width="36" height="12" rx="2" fill="none" stroke="#2d3142" stroke-opacity="0.4" stroke-width="0.8"/>
+<text x="662.0" y="75" fill="#2d3142" fill-opacity="0.85" font-size="7" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle" letter-spacing="0.08em">OUTPUT</text>
+<text x="692.0" y="91.0" fill="#2d3142" font-size="12" font-weight="600" font-family="Geist, 'Segoe UI', Arial, sans-serif" text-anchor="middle">Bundle</text>
+<text x="692.0" y="104.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">model_weights.pt</text>
+<text x="692.0" y="116.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">15 models</text>
+<text x="692.0" y="128.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', Consolas, 'Courier New', monospace" text-anchor="middle">cut-off 0.475</text>
+</svg>
