@@ -1,0 +1,18 @@
+lrc25_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.lowres.p=0.25
+lrd25_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 augment.lowres.p=0.25
+lrr25_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 augment.lowres.p=0.25
+lrc25_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.lowres.p=0.25
+lrd25_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 augment.lowres.p=0.25
+lrr25_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 augment.lowres.p=0.25
+lrc25_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.lowres.p=0.25
+lrd25_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 augment.lowres.p=0.25
+lrr25_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 augment.lowres.p=0.25
+lrc10_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.lowres.p=0.1
+lrd10_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 augment.lowres.p=0.1
+lrr10_f2 data.fold=2 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 augment.lowres.p=0.1
+lrc10_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.lowres.p=0.1
+lrd10_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 augment.lowres.p=0.1
+lrr10_f3 data.fold=3 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 augment.lowres.p=0.1
+lrc10_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 augment.lowres.p=0.1
+lrd10_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=deit3_small_patch16_224.fb_in22k_ft_in1k model.drop_path_rate=0.1 model.drop_rate=0.1 augment.lowres.p=0.1
+lrr10_f4 data.fold=4 data.relabel_csv=configs/relabel_flip85.csv train.mixup=0.4 model.arch=resnet50d.ra2_in1k model.drop_path_rate=0.1 augment.lowres.p=0.1
