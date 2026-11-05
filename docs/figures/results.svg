@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 412" width="1280" height="412" role="img" aria-labelledby="results-title results-desc">
+<title id="results-title">Results at a glance</title>
+<desc id="results-desc">Held-out AUC 0.9119 with nothing leaked. Final recipe, fold version: AUC 0.9144. F1 0.886 at the 0.475 cut-off. Mean AUC 0.9117 under 20 kinds of damage, worst 0.9056. AUC 0.879 on faces shrunk to 28 by 28 pixels, up from 0.863. 73.1 s and 74.9 s for 3,000 test images on an NVIDIA T4, whole command.</desc>
+<defs>
+<clipPath id="frame"><rect width="1280" height="412" rx="16"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1280" height="412" fill="#0b1016"/>
+<rect x="0.5" y="0.5" width="1279" height="411" rx="16" fill="none" stroke="#1f2a37"/>
+</g>
+
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<text x="40" y="54" fill="#9aa7b4" font-size="16">AUC and F1 on 7,000 held-out training images, against the labels as given</text>
+
+<!-- tile frames -->
+<g fill="#111923" stroke="#1f2a37">
+<rect x="40" y="80" width="380" height="140" rx="10"/>
+<rect x="450" y="80" width="380" height="140" rx="10"/>
+<rect x="860" y="80" width="380" height="140" rx="10"/>
+<rect x="40" y="240" width="380" height="140" rx="10"/>
+<rect x="450" y="240" width="380" height="140" rx="10"/>
+<rect x="860" y="240" width="380" height="140" rx="10"/>
+</g>
+<!-- category bars: cyan accuracy, amber damage, violet speed -->
+<g fill="#4fd1e0"><rect x="40" y="80" width="5" height="140" rx="2.5"/><rect x="450" y="80" width="5" height="140" rx="2.5"/><rect x="860" y="80" width="5" height="140" rx="2.5"/></g>
+<g fill="#f5a524"><rect x="40" y="240" width="5" height="140" rx="2.5"/><rect x="450" y="240" width="5" height="140" rx="2.5"/></g>
+<rect x="860" y="240" width="5" height="140" rx="2.5" fill="#b892ff"/>
+
+<!-- category tags -->
+<g font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="600" letter-spacing="1.6" text-anchor="end">
+<text x="1216" y="110" fill="#4fd1e0">ACCURACY</text><text x="806" y="110" fill="#4fd1e0">ACCURACY</text><text x="396" y="110" fill="#4fd1e0">ACCURACY</text>
+<text x="396" y="270" fill="#f5a524">DAMAGE</text><text x="806" y="270" fill="#f5a524">DAMAGE</text><text x="1216" y="270" fill="#b892ff">SPEED</text>
+</g>
+
+<!-- row 1 -->
+<g fill="#9aa7b4" font-size="16">
+<text x="68" y="112">Held-out AUC, nothing leaked</text>
+<text x="478" y="112">Final recipe, fold version</text>
+<text x="888" y="112">F1 at the 0.475 cut-off</text>
+</g>
+<g fill="#f0f4f8" font-size="46" font-weight="600">
+<text x="66" y="170">0.9119</text>
+<text x="476" y="170">0.9144</text>
+<text x="886" y="170">0.886</text>
+</g>
+<g fill="#8b98a5" font-size="15">
+<text x="68" y="200">Leak-free test, recipe before heavy shrinking</text>
+<text x="478" y="200">Same folds, label-fix leak not removed</text>
+<text x="888" y="200">Accuracy 0.885, precision 0.880, recall 0.892</text>
+</g>
+
+<!-- row 2 -->
+<g fill="#9aa7b4" font-size="16">
+<text x="68" y="272">Mean AUC under 20 kinds of damage</text>
+<text x="478" y="272">Face shrunk to 28 x 28 pixels</text>
+<text x="888" y="272">3,000 test images on an NVIDIA T4</text>
+</g>
+<g fill="#f0f4f8" font-size="46" font-weight="600">
+<text x="66" y="330">0.9117</text>
+<text x="476" y="330">0.879</text>
+<text x="886" y="330">74.9 s</text>
+</g>
+<g fill="#8b98a5" font-size="15">
+<text x="68" y="360">Worst of the 20: 0.9056, the strongest blur</text>
+<text x="478" y="360">Was 0.863 before heavy-shrink training</text>
+<text x="888" y="360">Slower of 2 runs, whole command. Limit 300 s</text>
+</g>
+</g>
+</svg>
