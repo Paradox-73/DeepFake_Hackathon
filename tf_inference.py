@@ -41,6 +41,7 @@ def main():
     parser.add_argument("--weights", required=True, help="tf_savedmodel.zip or its unzipped folder")
     parser.add_argument("--output", default="predictions_tf.csv", help="Output CSV path")
     parser.add_argument("--batch_size", type=int, default=32)
+    parser.add_argument("--threshold", type=float, default=THRESHOLD, help="label = confidence >= threshold")
     args = parser.parse_args()
 
     t0 = time.time()
@@ -70,7 +71,7 @@ def main():
         w = csv.writer(f, lineterminator="\n")
         w.writerow(["image_id", "label", "confidence"])
         for i, c in zip(ids, conf):
-            w.writerow([i, int(c >= THRESHOLD), "%.8f" % c])
+            w.writerow([i, int(c >= args.threshold), "%.8f" % c])
     print("[DONE] %d rows in %s | %.1f s" % (len(ids), args.output, time.time() - t0))
 
 

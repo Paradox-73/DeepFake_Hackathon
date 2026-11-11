@@ -122,6 +122,8 @@ def main():
     parser.add_argument("--batch_size", type=int, default=64)
     # 0: decoding is a tiny share of the run, and worker processes can die in containers with little shared memory
     parser.add_argument("--workers", type=int, default=0)
+    parser.add_argument("--threshold", type=float, default=None,
+                        help="label = confidence >= threshold (default: the cut-off stored in --weights, 0.475)")
     args = parser.parse_args()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -129,6 +131,7 @@ def main():
     t0 = time.time()
     bundle = torch.load(args.weights, map_location="cpu", weights_only=False)
     ids, conf = predict(bundle, args.test_dir, device, args.batch_size, args.workers)
+    threshold = bundle["threshold"] if args.threshold is None else args.threshold
 
     assert len(ids) == len(set(ids)), "duplicate image ids"
     assert ((conf >= 0) & (conf <= 1)).all(), "confidence outside [0, 1]"
@@ -138,11 +141,11 @@ def main():
         w = csv.writer(f, lineterminator="\n")  # same line ends as sample_submission.csv
         w.writerow(["image_id", "label", "confidence"])
         for i in order:
-            w.writerow([ids[i], int(conf[i] >= bundle["threshold"]), "%.8f" % conf[i]])
+            w.writerow([ids[i], int(conf[i] >= threshold), "%.8f" % conf[i]])
 
     peak = torch.cuda.max_memory_allocated() / 1e6 if device.type == "cuda" else 0
     print("[DONE] %d rows in %s | %.1f s on %s | peak GPU memory %.0f MB | predicted fake %.1f%%" % (
-        len(ids), args.output, time.time() - t0, device, peak, 100 * (conf >= bundle["threshold"]).mean()))
+        len(ids), args.output, time.time() - t0, device, peak, 100 * (conf >= threshold).mean()))
 
 
 if __name__ == "__main__":

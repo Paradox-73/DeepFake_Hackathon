@@ -93,7 +93,7 @@ Use Python 3.10 and a CUDA GPU. On an NVIDIA T4 the whole run takes about 75 sec
    python inference_script.py --test_dir ./test/images/ --weights ./model_weights.pt --output predictions.csv
    ```
 
-The script writes `image_id,label,confidence`, where `confidence` is the probability that the image is fake. It uses no random numbers. An unreadable image gets a confidence of 0.5 and a warning. The optional flags are `--batch_size` (default 64) and `--workers` (default 0, images load in the main process).
+The script writes `image_id,label,confidence`, where `confidence` is the probability that the image is fake. It uses no random numbers. An unreadable image gets a confidence of 0.5 and a warning. The optional flags are `--batch_size` (default 64), `--workers` (default 0, images load in the main process), and `--threshold` (default: the 0.475 cut-off stored in `model_weights.pt`), which sets `label` = `confidence` >= threshold, as in the organisers' template.
 
 ### Files in the submission folder
 
@@ -102,6 +102,7 @@ The script writes `image_id,label,confidence`, where `confidence` is the probabi
 | `predictions.csv` | `image_id,label,confidence` for all 3,000 test images |
 | `model_weights.pt`, `inference_script.py`, `requirements.txt` | The PyTorch ensemble and the script that produced `predictions.csv` |
 | `tf_savedmodel.zip`, `tf_inference.py` | The same ensemble as a TensorFlow SavedModel, and a script that runs it |
+| `report.pdf` | Two-page brief: architecture, augmentations, and validation strategy |
 | `technical_report.pdf` | Approach, architecture, experiments, results, and limitations |
 | `source_code.zip` | This repository: training code, configs, scripts, and the decision log |
 | `training_logs.zip` | Per-epoch loss, AUC, F1, and accuracy of all 15 fold runs |
@@ -123,7 +124,7 @@ The script writes `image_id,label,confidence`, where `confidence` is the probabi
 | `configs/jobs_*.txt` | The exact overrides of every experiment in the report. |
 | [`scripts/`](scripts/) | Folds, label audits, ensembling, evaluation, figures, and export. |
 | [`decisions.tsv`](decisions.tsv) | A log of each decision with its evidence and result. |
-| [`docs/technical_report.md`](docs/technical_report.md), [`docs/technical_report.pdf`](docs/technical_report.pdf) | The technical report. |
+| [`docs/technical_report.md`](docs/technical_report.md), [`docs/technical_report.pdf`](docs/technical_report.pdf) | The technical report. [`docs/report.pdf`](docs/report.pdf) is its two-page brief. |
 | [`docs/figures/`](docs/figures/) | Every figure in this README and the report. |
 
 ## Rules compliance
