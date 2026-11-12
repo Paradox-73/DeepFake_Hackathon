@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-labelledby="banner-title banner-desc">
-<title id="banner-title">Spotting deepfakes when some labels are wrong</title>
-<desc id="banner-desc">Synergy '26 Deepfake ML Hackathon, IIIT Bangalore. Team Claude laggye: Kanav Bhardwaj, Bhavya Jain, Nirbhay Sharma, Aaryan Antala. A face crop goes through 15 models, 5 seeds each of ConvNeXt-T, DeiT3-S and ResNet-50D; their rescaled scores are averaged into the probability that the image is fake, with a label cut-off of 0.475.</desc>
+<title id="banner-title">Deepfake detector: 15 models, 3 families</title>
+<desc id="banner-desc">Synergy '26 Deepfake ML Hackathon, IIIT Bangalore. Team Claude laggye: Kanav Bhardwaj, Bhavya Jain, Nirbhay Sharma, Aaryan Antala. A 15-model ensemble, 5 seeds each of ConvNeXt-T, DeiT3-S and ResNet-50D, all ImageNet-pretrained: held-out AUC 0.9119, F1 0.886, and 3,000 test images in about 75 s on an NVIDIA T4. The rescaled scores are averaged into the probability that the image is fake, with a label cut-off of 0.475.</desc>
 <defs>
 <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.05"/></pattern>
 <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#4fd1e0" stop-opacity="0.16"/><stop offset="1" stop-color="#4fd1e0" stop-opacity="0"/></radialGradient>
@@ -17,14 +17,15 @@
 </g>
 
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-<text x="64" y="76" fill="#4fd1e0" font-size="14" font-weight="600" letter-spacing="2.2" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace">SYNERGY '26 DEEPFAKE ML HACKATHON · IIIT BANGALORE</text>
-<text x="62" y="140" fill="#f0f4f8" font-size="50" font-weight="700">Spotting deepfakes</text>
-<text x="62" y="198" fill="#f0f4f8" font-size="50" font-weight="700">when some <tspan fill="#f5a524">labels are wrong</tspan></text>
-<text x="64" y="242" fill="#9aa7b4" font-size="19">15-model ensemble of ConvNeXt-T, DeiT3-S and ResNet-50D</text>
-<text x="64" y="278" fill="#6f7d8c" font-size="13" font-weight="600" letter-spacing="2" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace">TEAM</text>
-<text x="112" y="279" fill="#f0f4f8" font-size="18" font-weight="600">Claude laggye</text>
-<text x="246" y="279" fill="#9aa7b4" font-size="15">Kanav Bhardwaj, Bhavya Jain, Nirbhay Sharma, Aaryan Antala</text>
-<rect x="234" y="265" width="1" height="18" fill="#2c3946"/>
+<text x="64" y="62" fill="#4fd1e0" font-size="14" font-weight="600" letter-spacing="2.2" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace">SYNERGY '26 DEEPFAKE ML HACKATHON · IIIT BANGALORE</text>
+<text x="62" y="122" fill="#f0f4f8" font-size="50" font-weight="700">Deepfake detector:</text>
+<text x="62" y="178" fill="#f0f4f8" font-size="50" font-weight="700"><tspan fill="#f5a524">15 models</tspan>, 3 families</text>
+<text x="64" y="216" fill="#9aa7b4" font-size="18">5 seeds each of ConvNeXt-T, DeiT3-S and ResNet-50D, ImageNet-pretrained</text>
+<text x="64" y="244" fill="#4fd1e0" font-size="18" font-weight="600">Held-out AUC 0.9119  ·  F1 0.886  ·  3,000 test images in about 75 s on a T4</text>
+<text x="64" y="284" fill="#6f7d8c" font-size="13" font-weight="600" letter-spacing="2" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace">TEAM</text>
+<text x="112" y="285" fill="#f0f4f8" font-size="18" font-weight="600">Claude laggye</text>
+<text x="246" y="285" fill="#9aa7b4" font-size="15">Kanav Bhardwaj, Bhavya Jain, Nirbhay Sharma, Aaryan Antala</text>
+<rect x="234" y="271" width="1" height="18" fill="#2c3946"/>
 </g>
 
 <!-- input: an abstract 224x224 crop drawn as a grid of grey cells -->
